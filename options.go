@@ -1504,10 +1504,6 @@ func (opts *Options) Destroy() {
 		C.rocksdb_compactionfilter_destroy(opts.ccf)
 		opts.ccf = nil
 	}
-	if opts.cmo != nil {
-		C.rocksdb_mergeoperator_destroy(opts.cmo)
-		opts.cmo = nil
-	}
 	opts.c = nil
 	opts.env = nil
 	opts.bbto = nil
